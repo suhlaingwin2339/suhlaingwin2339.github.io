@@ -4,13 +4,13 @@
 }
 
 body{
-    background-color: bisque;
+    background-color: rgb(235, 201, 201);
 }
 
 .navbar{
 
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto 1fr;
     gap: 20px;
     align-items: center;
     margin-top: 20px;
@@ -27,16 +27,11 @@ body{
     color: rgb(156, 69, 18);
 }
 
-.logo-name h1:hover{
-    font-weight: 900;
-
-}
-
 .nav-menu ul{
     display: grid;
-    grid-template-columns: repeat(5,auto);
+    grid-template-columns: repeat(4,auto);
     gap: 10px;
-    justify-content: center;
+    justify-content: end;
 }
 
 .nav-menu ul li{
@@ -45,16 +40,20 @@ body{
 }
 
 .nav-menu ul li a{
+    
     text-decoration: none;
     color: rgb(156, 69, 18);
     padding: 10px;
     font-size: 20px;
-    border-radius: 7px;
+    border-radius: 5px;
 }
 
 .nav-menu ul li a:hover{
     background-color: rgb(233, 118, 114);
-    color: black;
+    color: pink;
+    border-radius: 50px;
+    transition: all 0.3s ease 0s;
+    
     
 }
 
@@ -63,16 +62,17 @@ body{
     position: relative;
     width: 100%;
     height: 600px;
-    background-image: url(../images/profile.png);
+    background-image: url(../images/pp3.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top: 10px;
-}
+    margin-top: 17px;
+   
 
-.idol-container{
+}
+.overtext{
     position: absolute;
-    background-color: rgb(156, 69, 18);;
+    background-color: rgba(0,0,0,0.6);
     width: 100%;
     height: 100%;
     display: flex;
@@ -88,22 +88,326 @@ body{
     font-weight: bold;
     margin-bottom: 20px;
 }
-
+    
 .idol-text .tag-line{
     margin: 20px 0;
 }
 
-.order-button{
+@font-face {
+    font-family: sat;
+    src: url(../fonts/Satisfy-Regular.ttf);
+}
+
+
+
+.idol-text h1{
+    letter-spacing: 40px;
+    font-family: sat;
+    color: bisque;
+    text-shadow: 5px 3px rgb(233, 118, 114);
+}
+
+.idol-text .tag-line{
+    margin: 40px 0px;
+    font-family: sat;
+    letter-spacing: 10px;
+    color: bisque;
+}
+
+.idol-button{
     display: inline-block;
     padding: 20px 30px;
-    background-color: #cda45e;
+    background-color: bisque;
     text-decoration: none;
-    color: white;
+    color: red;
+    border-radius: 10px;
+
+}
+
+.idol-button:hover{
+    background-color: rgb(233, 154, 151);
+
+    border-radius: 50px;
+
+    transition: all 0.3s ease 0s;
+}
+
+/* Biography */
+
+.biography{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 100px 70px;
+    column-gap: 50px;
+
+
+}
+
+.biography-img{
+    width: 100%;
+    height: auto;
+    justify-self: center;
+}
+
+.biography-about{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.biography-about h2{
+    font-size: 30px;
+    color: rgb(170, 46, 42);
+    letter-spacing: 5px;
+    text-shadow: 1px 1px #9b3516;
+}
+
+.table-content{
+    font-size: 20px;
+    color: rgb(230, 96, 91);
+    
+}
+.more-button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(230, 96, 91);
+    text-decoration: none;
+    color: rgb(129, 6, 6);
+    border-radius: 10px;
+
+}
+
+.more-button:hover{
+    background-color: rgb(233, 154, 151);
+
+    border-radius: 20px;
+
+    transition: all 0.3s ease 0s;
+}
+
+
+
+
+
+
+.photo-pp{
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    column-gap: 5px;
+    margin: 20px 70px;
+    border-color: bisque;
+    
+    
+    
+    
+}
+
+.photo-img{
+    width: 100%;
+    height: auto;
     border-radius: 5px;
-
 }
 
-.order-button:hover{
-    background-color: #917543;
+.photo-item:hover{
+    transform: scale(0.9);
+    transition-duration: .5s;
 }
 
+.photo-img{
+    overflow: hidden;
+    display: inline-block;
+}
+
+.photo-header{
+    color:rgb(233, 118, 114) ;
+}
+
+.photo-header h1{
+    
+    color: rgb(170, 46, 42);
+    text-align: center;
+    letter-spacing: 5px;
+    text-shadow: 1px 1px #9b3516;
+}
+
+/*.footer{
+    background-color: rgb(245, 153, 149);
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+}
+
+.footer .footer-title{
+    color: white;
+    font-weight: bold;
+}
+
+.footer .dev{
+    text-decoration: none;
+    color: #9b3516;
+    font-weight: bold;
+}
+
+*/
+
+.contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 50px 70px;
+    column-gap: 50px;
+}
+
+.contact-header{
+    margin-top: 70px;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(170, 46, 42);
+    letter-spacing: 5px;
+    text-shadow: 1px 1px #9b3516;
+}
+
+.contact-info{
+    display: flex;
+    flex-direction: column;
+   
+    align-items: start;
+}
+
+.contact-info p{
+    font-size: 20px;
+    color: rgb(170, 46, 42);
+    letter-spacing: 5px;
+    
+}
+
+.contact-form{
+   
+    margin-bottom: 20px;
+    padding: 15px 0;
+}
+
+.contact-form label{
+    display: block;
+    font-weight: bold;
+    color: rgb(230, 96, 91);
+    padding: 10px 0;
+}
+
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #fdeeee;
+    border-radius: 5px;
+    
+}
+
+.contact-form .name{
+    background-color: #ffc6c6;
+    color: rgb(204, 117, 117);
+    outline: none;
+}
+
+.contact-form .name:hover{
+    
+    height: 30px;
+    width: 380px;
+    transition: ease 0.5s;
+}
+
+.contact-form .email{
+    background-color: #d1f7b9;
+    color: rgb(204, 117, 117);
+    outline: none;
+}
+
+.contact-form .email:hover{
+    
+    height: 30px;
+    width: 380px;
+    transition: ease 0.5s;
+}
+
+.contact-form .message{
+    background-color: #f2f39d;
+    color: rgb(204, 117, 117);
+    outline: none;
+}
+
+.contact-form .message:hover{
+    
+    height: 30px;
+    width: 380px;
+    transition: ease 0.5s;
+}
+
+.contact-info .submit{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(230, 96, 91);
+    text-decoration: none;
+    color: rgb(129, 6, 6);
+    border-radius: 10px;
+    outline: none;
+   
+}
+
+.submit:hover{
+    background-color: rgb(233, 154, 151);
+
+    border-radius: 20px;
+
+    transition: all 0.3s ease 0s;
+}
+
+
+
+
+
+
+footer {
+	text-align: center;
+	background-color: rgb(250, 189, 187);
+	padding: 60px 0px;
+}
+
+
+
+footer .social-icons {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+footer .social-icons li {
+	display: inline-block;
+	margin: 0px 3px;
+}
+
+footer .social-icons li a {
+	width: 80px;
+	height: 80px;
+	display: inline-block;
+	line-height: 80px;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	background-color: rgb(233, 118, 114);
+	transition: all 0.5s;
+}
+
+footer .social-icons li a:hover {
+	background-color: #f7c481;
+	color: #1f3646;
+}
+
+footer p {
+	color: rgb(170, 46, 42);
+	font-size: 12px;
+	margin-top: 40px; 	
+}
+
+footer p em {
+	font-style: normal;
+	font-weight: 700;
+	color: rgb(129, 6, 6);
+}
